@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Blog</title>
+  <link rel="stylesheet" href="/styles/index.css">
+</head>
+
+<body>
+    <div class="container">
+      <h1 class="header">Welcome to My Blog!</h1>
+      <p class="description">This page was created to share interesting facts about animals.</p>
+      <a id="newPost-btn" href="/posts/new">New Post</a>
+      <ul id="postsList">
+        <% posts.forEach(post => { %>
+            <li class="list-item">
+                <h3 class="post-title">
+                    <%= post.title %>
+                </h3>
+                <p class="post-content">
+                    <%= post.content %>
+                </p>
+                <small>
+                    by: <%= post.author %> on <%= post.date %>
+                </small>
+                <br>
+                <div class="btn-group">
+                    <a class="btn btn-edit" href="/posts/<%= post.id %>/edit/">Edit</a>
+                    <form action="/posts/<%= post.id %>?_method=DELETE" method="POST">
+                       <button type="submit" class="btn btn-delete">Delete</button>
+                    </form>
+                </div>
+            </li>
+        <% }); %>
+    </ul>
+  </div>
+</body>
+
+</html>

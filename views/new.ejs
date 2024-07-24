@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>New Post</title>
+  <link rel="stylesheet" href="/styles/index.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="header">Add New Post</h1>
+        <form action="/posts" method="POST">
+            <div class="form-input">
+                <input class="form-item" type="text" name="title" placeholder="Title" required>
+                <textarea class="form-item" name="content" placeholder="Content" required rows="10"></textarea>
+                <input class="form-item" type="text" name="author" placeholder="Author" required>
+            </div>
+            <div class="btn-group">
+                <button class="btn btn-addPost " type="submit">Add</button>
+                <a href="/" class="btn btn-cancel">Cancel</a>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>

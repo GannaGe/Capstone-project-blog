@@ -1,0 +1,156 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    line-height: 1.5;
+    height: 100vh;
+    width: 100vw;
+    color: white;
+    background-color: #0e538c;
+    background-image: url("https://www.transparenttextures.com/patterns/cubes.png");
+}
+
+.container {
+    max-width: 800px;
+    padding: 30px;
+    margin: 30px auto;
+    background-color: #0e538c;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 10px;
+}
+
+.header {
+    font-family:'Times New Roman', Times, serif;
+    font-size: 50px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.description {
+    justify-content: center;
+    text-align: center;
+    font-size: 22px;
+    margin-bottom: 30px;
+}
+
+#newPost-btn {
+    display: block;
+    font-size: 20px;
+    width: 100%;
+    padding: 10px 0;
+    margin-bottom: 40px;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    background-color: #83B4FF;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.list-item {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 30px;
+    margin-bottom: 30px;
+    color: black;
+    background-color: white;
+    border-radius: 8px;
+}
+
+.list-item:last-child {
+    margin-bottom: 0;
+}
+
+.post-title,
+.post-content {
+    margin-bottom: 20px;
+}
+
+.btn {
+    text-align: center;
+    justify-content: center;
+    font-size: inherit;
+    text-align: center;
+    width: 90px;
+    height: 46px;
+    padding: 10px;
+    text-decoration: none;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.btn-edit,
+.btn-addPost,
+.btn-updatePost {
+    margin-right: 15px;
+    background-color: green;
+}
+
+.btn-delete,
+.btn-cancel {
+    background-color: red;
+}
+
+.btn:hover,
+#newPost-btn:hover {
+    opacity: 0.8;
+}
+
+.btn-group {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.form-input {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.form-item {
+    font-family: inherit;
+    font-size: inherit;
+    margin-bottom: 20px;
+    padding: 15px;
+    color: rgb(142, 141, 141);
+    border-radius: 8px;
+    border: none;
+}
+
+@media(max-width: 880px) {
+    .container{
+        width: 600px;
+    }
+}
+
+@media(max-width: 680px) {
+    .container {
+        width: 380px;
+    }
+
+    .header {
+        font-size: 40px;
+    }
+}
+
+
+@media(max-width: 400px) {
+    .container {
+        width: 330px;
+    }
+
+    .header {
+        font-size: 30px;
+    }
+}
